@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sub_catID" Type="int" Nullable="false" />
+    <Property Name="SUPPLIERID" Type="int" Nullable="false" />
+    <Property Name="manufID" Type="int" Nullable="false" />
+    <Property Name="prodname" Type="varchar" MaxLength="3000" Nullable="false" />
+    <Property Name="prodimage" Type="varchar" MaxLength="8000" />
+    <Property Name="price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="series" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="modelyear" Type="int" Nullable="false" />
+    <Property Name="model_info" Type="varchar" MaxLength="8000" />
+    <Property Name="techspecs" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <EntityContainer Name="DatabaseModelStoreContainer">
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

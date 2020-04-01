@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JOOLE_DATABASEModelStoreContainer" CdmEntityContainer="JOOLEEntity">
+    <EntitySetMapping Name="CUSTOMERs">
+      <EntityTypeMapping TypeName="JOOLE_DATABASEModel.CUSTOMER">
+        <MappingFragment StoreEntitySet="CUSTOMER">
+          <ScalarProperty Name="CUSTOMERID" ColumnName="CUSTOMERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="JOOLE_DATABASEModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="sub_catID" ColumnName="sub_catID" />
+          <ScalarProperty Name="manufName" ColumnName="manufName" />
+          <ScalarProperty Name="prodname" ColumnName="prodname" />
+          <ScalarProperty Name="prodimage" ColumnName="prodimage" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="series" ColumnName="series" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="modelyear" ColumnName="modelyear" />
+          <ScalarProperty Name="usetype" ColumnName="usetype" />
+          <ScalarProperty Name="applicate" ColumnName="applicate" />
+          <ScalarProperty Name="mountingloc" ColumnName="mountingloc" />
+          <ScalarProperty Name="accessories" ColumnName="accessories" />
+          <ScalarProperty Name="Airflow" ColumnName="Airflow" />
+          <ScalarProperty Name="PwrMin" ColumnName="PwrMin" />
+          <ScalarProperty Name="PwrMax" ColumnName="PwrMax" />
+          <ScalarProperty Name="OperatingVoltageMin" ColumnName="OperatingVoltageMin" />
+          <ScalarProperty Name="OperatingVoltageMax" ColumnName="OperatingVoltageMax" />
+          <ScalarProperty Name="FanSpeedMin" ColumnName="FanSpeedMin" />
+          <ScalarProperty Name="FanSpeedMax" ColumnName="FanSpeedMax" />
+          <ScalarProperty Name="NumofSpeeds" ColumnName="NumofSpeeds" />
+          <ScalarProperty Name="SoundAtMaxSpeed" ColumnName="SoundAtMaxSpeed" />
+          <ScalarProperty Name="FanSweepDiam" ColumnName="FanSweepDiam" />
+          <ScalarProperty Name="SuctionSpeed" ColumnName="SuctionSpeed" />
+          <ScalarProperty Name="PipeDiameter" ColumnName="PipeDiameter" />
+          <ScalarProperty Name="Brightness" ColumnName="Brightness" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="HeightMin" ColumnName="HeightMin" />
+          <ScalarProperty Name="HeightMax" ColumnName="HeightMax" />
+          <ScalarProperty Name="Wght" ColumnName="Wght" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROJECTs">
+      <EntityTypeMapping TypeName="JOOLE_DATABASEModel.PROJECT">
+        <MappingFragment StoreEntitySet="PROJECT">
+          <ScalarProperty Name="PROJECT_ID" ColumnName="PROJECT ID" />
+          <ScalarProperty Name="PROJECT_LOCATION" ColumnName="PROJECT LOCATION" />
+          <ScalarProperty Name="PROJECT_NAME" ColumnName="PROJECT NAME" />
+          <ScalarProperty Name="CUSTOMERID" ColumnName="CUSTOMERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subcats">
+      <EntityTypeMapping TypeName="JOOLE_DATABASEModel.Subcat">
+        <MappingFragment StoreEntitySet="Subcat">
+          <ScalarProperty Name="sub_catID" ColumnName="sub_catID" />
+          <ScalarProperty Name="sub_catname" ColumnName="sub_catname" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

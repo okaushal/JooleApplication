@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+
+<div class="site-block-wrap">
+        <div class="site-blocks-cover overlay overlay-2" style="background-image: url(../../Design/products/images/background5.jpg);" data-aos="fade" id="home-section">
+
+
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6 mt-lg-5 text-center">
+                        <h1 class="text-shadow">Search Here</h1>
+                        <br />
+                        <br />
+                        <br />
+
+                        <div>
+                            @using (Html.BeginForm("ProductSummary", "Product"))
+                            {
+                            <div class="select-wrap">
+                                <select class="form-control px-3 category">
+                                    <option value="Mechanical">Mechanical</option>
+                                    <option value="Plumbing">Plumbing</option>
+                                    <option value="Furniture">Furniture</option>
+                                    <option value="Electrical">Electrical</option>
+                                </select>
+                            </div>
+                                <br/>
+                                <br />
+                                <div class="active-bg-primary">
+                                    
+                                    @Html.TextBox("searchText", null, new {name = "subcatName", @class = "form-control textBox" })
+                                </div>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <p><button type="submit" class="btn btn-primary px-5 py-3">GO!</button></p>
+                                    }
+                                </div>
+                </div>
+            </div>
+
+
+        </div>
+  
+        </div>
+</div>
+
+
+
+
+@*@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#textBox").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '@Url.Action("GetSubcats", "Search")',
+                        dataType: 'json',
+                        data: {
+                            term: request.term,
+                            categoryName: $("#category").val()
+                        },
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return item;
+                            }))
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+}*@

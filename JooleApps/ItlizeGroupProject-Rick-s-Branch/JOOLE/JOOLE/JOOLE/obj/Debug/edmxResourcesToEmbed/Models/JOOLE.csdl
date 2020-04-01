@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JOOLE_DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUSTOMERID" />
+    </Key>
+    <Property Name="CUSTOMERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FULLNAME" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PICTURE" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="PROJECTs" Relationship="Self.FK__PROJECT__CUSTOME__267ABA7A" FromRole="CUSTOMER" ToRole="PROJECT" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sub_catID" Type="Int32" Nullable="false" />
+    <Property Name="manufName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prodname" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prodimage" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="series" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="model" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="modelyear" Type="Int32" Nullable="false" />
+    <Property Name="usetype" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="applicate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="mountingloc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="accessories" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Airflow" Type="Int32" />
+    <Property Name="PwrMin" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="PwrMax" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="OperatingVoltageMin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OperatingVoltageMax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FanSpeedMin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FanSpeedMax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NumofSpeeds" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SoundAtMaxSpeed" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FanSweepDiam" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SuctionSpeed" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PipeDiameter" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Brightness" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Warranty" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HeightMin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HeightMax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Wght" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Subcat" Relationship="Self.FK__Product__sub_cat__2C3393D0" FromRole="Product" ToRole="Subcat" />
+  </EntityType>
+  <EntityType Name="PROJECT">
+    <Key>
+      <PropertyRef Name="PROJECT_ID" />
+    </Key>
+    <Property Name="PROJECT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PROJECT_LOCATION" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PROJECT_NAME" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CUSTOMERID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CUSTOMER" Relationship="Self.FK__PROJECT__CUSTOME__267ABA7A" FromRole="PROJECT" ToRole="CUSTOMER" />
+  </EntityType>
+  <EntityType Name="Subcat">
+    <Key>
+      <PropertyRef Name="sub_catID" />
+    </Key>
+    <Property Name="sub_catID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sub_catname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Product__sub_cat__2C3393D0" FromRole="Subcat" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK__PROJECT__CUSTOME__267ABA7A">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="PROJECT" Type="Self.PROJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="CUSTOMERID" />
+      </Principal>
+      <Dependent Role="PROJECT">
+        <PropertyRef Name="CUSTOMERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product__sub_cat__2C3393D0">
+    <End Role="Subcat" Type="Self.Subcat" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subcat">
+        <PropertyRef Name="sub_catID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="sub_catID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JOOLEEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CUSTOMERs" EntityType="Self.CUSTOMER" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="PROJECTs" EntityType="Self.PROJECT" />
+    <EntitySet Name="Subcats" EntityType="Self.Subcat" />
+    <AssociationSet Name="FK__PROJECT__CUSTOME__267ABA7A" Association="Self.FK__PROJECT__CUSTOME__267ABA7A">
+      <End Role="CUSTOMER" EntitySet="CUSTOMERs" />
+      <End Role="PROJECT" EntitySet="PROJECTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product__sub_cat__2C3393D0" Association="Self.FK__Product__sub_cat__2C3393D0">
+      <End Role="Subcat" EntitySet="Subcats" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

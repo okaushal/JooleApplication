@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/JOOLE/JOOLE/JOOLE/App_Data/Database.mdf
+/JOOLE/JOOLE/JOOLE/App_Data/Database_log.ldf

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PROJECT">
+    <Key>
+      <PropertyRef Name="PROJECT ID" />
+    </Key>
+    <Property Name="PROJECT ID" Type="int" Nullable="false" />
+    <Property Name="PROJECT LOCATION" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="PROJECT NAME" Type="nchar" MaxLength="50" />
+    <Property Name="CUSTOMERID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DatabaseModel1StoreContainer">
+    <EntitySet Name="PROJECT" EntityType="Self.PROJECT" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

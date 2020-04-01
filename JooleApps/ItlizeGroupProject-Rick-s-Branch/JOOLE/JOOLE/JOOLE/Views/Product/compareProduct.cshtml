@@ -1,0 +1,250 @@
+﻿@model JOOLE.Models.Product
+
+@{
+    ViewBag.Title = "compareProduct";
+}
+
+<h2>compareProduct</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sub_catID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sub_catID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.manufName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.manufName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodimage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodimage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.series)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.series)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelyear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelyear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usetype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usetype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applicate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applicate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mountingloc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mountingloc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.accessories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accessories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Airflow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Airflow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PwrMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PwrMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PwrMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PwrMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OperatingVoltageMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OperatingVoltageMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OperatingVoltageMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OperatingVoltageMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FanSpeedMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FanSpeedMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FanSpeedMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FanSpeedMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumofSpeeds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumofSpeeds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoundAtMaxSpeed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoundAtMaxSpeed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FanSweepDiam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FanSweepDiam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuctionSpeed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuctionSpeed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PipeDiameter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PipeDiameter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brightness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brightness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Warranty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Warranty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeightMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeightMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeightMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeightMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wght)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wght)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.productID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

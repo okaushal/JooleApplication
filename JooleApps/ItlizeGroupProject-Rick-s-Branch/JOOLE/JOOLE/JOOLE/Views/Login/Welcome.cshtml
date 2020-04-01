@@ -1,0 +1,123 @@
+﻿@model JOOLE.Models.CUSTOMER
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JOOLE</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/Design/web_design/plugins/bootstrap/bootstrap.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="~/Design/web_design/plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="~/Design/web_design/plugins/themify-icons/themify-icons.css">
+
+    <!-- Main Stylesheet -->
+    <link href="~/Design/web_design/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <header class="navigation fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navigation">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Welcome","Login")">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Login","Login")">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("SignUp","Login")">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero area -->
+    <section class="hero-area bg-primary" id="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11 mx-auto">
+                    <h1 class="text-white font-tertiary">Hi, I’m <br> JOOLE! </h1>
+                </div>
+            </div>
+        </div>
+        <div class="layer-bg w-100">
+            <img class="img-fluid w-100" src="~/Design/web_design/images/illustrations/leaf-bg.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l2">
+            <img src="~/Design/web_design/images/illustrations/dots-cyan.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l3">
+            <img src="~/Design/web_design/images/illustrations/leaf-orange.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l4">
+            <img src="~/Design/web_design/images/illustrations/dots-orange.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l5">
+            <img src="~/Design/web_design/images/illustrations/leaf-yellow.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l6">
+            <img src="~/Design/web_design/images/illustrations/leaf-cyan.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l7">
+            <img src="~/Design/web_design/images/illustrations/dots-group-orange.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l8">
+            <img src="~/Design/web_design/images/illustrations/leaf-pink-round.png" alt="bg-shape">
+        </div>
+        <div class="layer" id="l9">
+            <img src="~/Design/web_design/images/illustrations/leaf-cyan-2.png" alt="bg-shape">
+        </div>
+        <!-- social icon -->
+        <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
+            <li class="mb-3"><a class="text-white" href="#"><i class="ti-facebook"></i></a></li>
+            <li class="mb-3"><a class="text-white" href="#"><i class="ti-instagram"></i></a></li>
+            <li class="mb-3"><a class="text-white" href="#"><i class="ti-dribbble"></i></a></li>
+            <li class="mb-3"><a class="text-white" href="#"><i class="ti-twitter"></i></a></li>
+        </ul>
+        <!-- /social icon -->
+    </section>
+   
+ 
+    <!-- /footer -->
+    <!-- jQuery -->
+    <script src="~/Design/web_design/plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="~/Design/web_design/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="~/Design/web_design/plugins/slick/slick.min.js"></script>
+    <!-- filter -->
+    <script src="~/Design/web_design/plugins/shuffle/shuffle.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="~/Design/web_design/js/script.js"></script>
+
+</body>
+</html>

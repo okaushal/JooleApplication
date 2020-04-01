@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\JOOLE",
+    "\\JOOLE\\JOOLE",
+    "\\JOOLE\\JOOLE DATABASE (SQL SERVER)",
+    "\\JOOLE\\JOOLE DATABASE (SQL SERVER)\\JOOLE DATABASE",
+    "\\JOOLE\\JOOLE DATABASE (SQL SERVER)\\JOOLE DATABASE\\dbo",
+    "\\JOOLE\\JOOLE DATABASE (SQL SERVER)\\JOOLE DATABASE\\dbo\\Tables",
+    "\\JOOLE\\JOOLE\\JOOLE",
+    "\\JOOLE\\JOOLE\\JOOLE\\App_Data",
+    "\\JOOLE\\JOOLE\\JOOLE\\Controllers",
+    "\\JOOLE\\JOOLE\\JOOLE\\DAL",
+    "\\JOOLE\\JOOLE\\JOOLE\\Models"
+  ],
+  "SelectedNode": "\\JOOLE\\JOOLE\\JOOLE.sln",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,47 @@
+﻿@{ 
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="@Url.Content("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")">
+    <style>
+        header, main, footer {
+            padding-left: 240px;
+        }
+
+        @@media only screen and (max-width : 992px) {
+            header, main, footer {
+                padding-left: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="#!">First Sidebar Link</a></li>
+            <li><a href="#!">Second Sidebar Link</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+    </nav>
+
+    @section Myscrips{
+        <script>
+        $('.button-collapse').sideNav({
+            menuWidth: 300,
+            edge: 'left',
+            closeOnClick: true
+        }
+        );
+    </script>
+        }
+    <script src="@Url.Content("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")"></script>
+</body>
+</html>
